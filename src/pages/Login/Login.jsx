@@ -41,7 +41,10 @@ function Login({toggleLoading}) {
 
 
     const onSubmit = (data) => {
-        dispatch(authLogin(data))
+        // dispatch(authLogin(data))
+        dispatch(authLogin({
+            email: "ha.nth.838@aptechlearning.edu.vn"
+        }))
     }
     return (
         <>

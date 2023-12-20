@@ -10,9 +10,9 @@ const initialState = {
     errorForm : {},
 };
 
-export const authLogin = createAsyncThunk("auth/login", async (requestParams, thunkApi) => {
+export const authLogin = createAsyncThunk("auth/login", async (body, thunkApi) => {
     try {
-        const response = await apiClient.get("/api-key", requestParams);
+        const response = await apiClient.get("/api-key", body);
         const apiKey = response.data.apiKey;
         if(apiKey){
             setLocalStorage("apiKey", apiKey)
